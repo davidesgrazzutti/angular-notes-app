@@ -1,1 +1,189 @@
-/* You can add global styles to this file, and also import other style files */
+/* ======================== */
+/* Stile generale della home */
+/* ======================== */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.app h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ======================== */
+/* Form per aggiungere note */
+/* ======================== */
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.note-form input,
+.note-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+  border-color: #4caf50;
+}
+
+.note-form button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.note-form button:hover {
+  background: #43a047;
+  transform: scale(1.03);
+}
+
+/* ======================== */
+/* Lista delle note         */
+/* ======================== */
+.note-list {
+  margin-top: 20px;
+}
+
+/* ======================== */
+/* Singola nota             */
+/* ======================== */
+.note-item {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Titolo e contenuto */
+.note-item h3 {
+  margin: 0 0 8px;
+  color: #333;
+}
+
+.note-item p {
+  margin: 0 0 10px;
+  color: #555;
+}
+
+/* Categoria */
+.note-item small {
+  color: #777;
+}
+
+/* Bottoni azione */
+.note-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.note-actions button {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.note-actions button:hover {
+  transform: scale(1.05);
+}
+
+.note-actions button:nth-child(1) {
+  background: #2196f3;
+  color: white;
+}
+
+.note-actions button:nth-child(1):hover {
+  background: #1976d2;
+}
+
+.note-actions button:nth-child(2) {
+  background: #f44336;
+  color: white;
+}
+
+.note-actions button:nth-child(2):hover {
+  background: #d32f2f;
+}
+
+/* ======================== */
+/* Modalità modifica nota   */
+/* ======================== */
+.note-item input,
+.note-item textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.note-item input:focus,
+.note-item textarea:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.08);
+}
+
+/* Bottoni salva/annulla edit */
+.note-item .note-actions .save {
+  background: #4caf50;
+  color: #fff;
+}
+
+.note-item .note-actions .cancel {
+  background: #9e9e9e;
+  color: #fff;
+}
+
+.note-item .note-actions .save:hover { background:#388e3c; }
+.note-item .note-actions .cancel:hover { background:#616161; }
+
+/* Altezza minima per textarea */
+.note-item textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ======================== */
+/* Lista vuota             */
+/* ======================== */
+.empty {
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+}

@@ -1,0 +1,10 @@
+<div *ngIf="notes.length === 0" class="empty">Nessuna nota ancora...</div>
+
+<div class="note-list">
+  <app-note-item
+    *ngFor="let note of notes"
+    [note]="note"
+    (deleteNote)="deleteNote.emit($event)"
+    (updateNote)="updateNote.emit($event)"
+  ></app-note-item>
+</div>

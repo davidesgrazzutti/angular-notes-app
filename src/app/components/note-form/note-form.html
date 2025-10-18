@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit()" class="note-form">
+  <input type="text" placeholder="Titolo" [(ngModel)]="title" name="title" required />
+  <textarea placeholder="Contenuto" [(ngModel)]="content" name="content" required></textarea>
+  <input type="text" placeholder="Categoria (es. Lavoro, Personale)" [(ngModel)]="category" name="category" />
+  <button type="submit">➕ Aggiungi Nota</button>
+</form>

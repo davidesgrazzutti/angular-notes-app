@@ -1,0 +1,21 @@
+<div class="note-item">
+  <div *ngIf="!isEditing">
+    <h3>{{note.title}}</h3>
+    <p>{{note.content}}</p>
+    <small>📂 {{note.category || 'Nessuna categoria'}}</small>
+    <div class="note-actions">
+      <button (click)="startEdit()">✏️ Modifica</button>
+      <button (click)="deleteNote.emit(note.id)">🗑️ Elimina</button>
+    </div>
+  </div>
+
+  <div *ngIf="isEditing">
+    <input [(ngModel)]="editTitle" />
+    <textarea [(ngModel)]="editContent"></textarea>
+    <input [(ngModel)]="editCategory" />
+    <div class="note-actions">
+      <button (click)="saveEdit()">💾 Salva</button>
+      <button (click)="cancelEdit()">❌ Annulla</button>
+    </div>
+  </div>
+</div> 
